@@ -40,6 +40,7 @@ var Player = function (x, y, speed) {
     this.sprite = 'images/char-boy.png';
 };
 
+// Update the position of the player
 Player.prototype.update = function () {
     if (this.y > 380) {
         this.y = 380;
@@ -63,6 +64,7 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// Check for user input for the movement of the player
 Player.prototype.handleInput = function (pressedKey) {
     switch (pressedKey) {
         case 'left':
